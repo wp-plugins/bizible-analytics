@@ -1,6 +1,6 @@
 <?php
 /*
-Copyright © 2012: Bizible.com
+Copyright Â© 2012: Bizible.com
 
 Plugin Name: Bizible Analytics
 Plugin URI: http://bizible.com/
@@ -12,26 +12,35 @@ Author URI: http://bizible.com
 */
 
 
-$biz_plugin_version     = '0.1.0';
-$biz_plugin_script      = 'js/analytics.js';
+$biz_plugin_script      = '//cdn.bizible.com/scripts/bizible.js';
 $biz_script_handle      = 'biz_analytics_js';
 
 
 function enqueue_biz_analytics()
 {
-    global $biz_plugin_version;
     global $biz_plugin_script;
     global $biz_script_handle;
 
     wp_enqueue_script ( 
         $biz_script_handle,
-        plugins_url($biz_plugin_script, __FILE__),
+        $biz_plugin_script,
         false,
-        $biz_plugin_version,
+        null,
         false);
 }
 
+function add_async_attribute($url)
+{
+    if ( FALSE === strpos($url, 'cdn.bizible.com/scripts/bizible'))
+    {
+        return $url;
+    }
+    // Must be a ', not "!
+    return "$url' async='";
+}
+
+
 // Hooked only to front-end pages (non-admin)
 add_action('wp_enqueue_scripts', 'enqueue_biz_analytics');
-
+add_filter( 'clean_url', 'add_async_attribute', 11, 1 );
 ?>
