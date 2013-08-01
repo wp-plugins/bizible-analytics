@@ -2,8 +2,8 @@
 Contributors: Aaron Bird, Peter Thompson, Jason Li
 Tags: seo, analytics
 Requires at least: 0.0.0
-Tested up to: 0.2.0
-Stable tag: 0.2.0
+Tested up to: 0.2.1
+Stable tag: 0.2.1
 License: Copyright © 2013: Bizible.com
 
 
@@ -28,3 +28,6 @@ Local search analytics plugin to help track the offline conversion. For more inf
 
 = 0.2.0 =
 * Move the script to CDN
+
+= 0.2.1 =
+* Add protocol to the script Url

@@ -1,11 +1,11 @@
 <?php
 /*
-Copyright © 2012: Bizible.com
+Copyright © 2013: Bizible.com
 
 Plugin Name: Bizible Analytics
 Plugin URI: http://bizible.com/
 Description: Local search analytics plugin to help track the offline conversion. Please visit <a href="http://bizible.com">Bizible</a> for more information.
-Version: 0.1.0
+Version: 0.2.1
 Author: Aaron Bird, Peter Thompson, Jason Li
 Author URI: http://bizible.com
 
@@ -20,10 +20,11 @@ function enqueue_biz_analytics()
 {
     global $biz_plugin_script;
     global $biz_script_handle;
-
+    
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https:" : "http:";
     wp_enqueue_script ( 
         $biz_script_handle,
-        $biz_plugin_script,
+        $protocol . $biz_plugin_script,
         false,
         null,
         false);
