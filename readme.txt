@@ -1,6 +1,6 @@
 === Bizible Analytics ===
 Contributors: Aaron Bird, Peter Thompson
-Tags: seo, analytics
+Tags: marketing, analytics
 Requires at least: 0.0.0
 Tested up to: 3.4
 Stable tag: 0.2.2
