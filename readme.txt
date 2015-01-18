@@ -2,7 +2,7 @@
 Contributors: Aaron Bird, Peter Thompson
 Tags: marketing, analytics
 Requires at least: 0.0.0
-Tested up to: 3.4
+Tested up to: 4.1
 Stable tag: 0.2.2
 License: Copyright © 2014: Bizible.com
 

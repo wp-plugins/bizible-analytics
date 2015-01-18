@@ -5,7 +5,7 @@ Copyright © 2013: Bizible.com
 Plugin Name: Bizible Analytics
 Plugin URI: http://bizible.com/
 Description: Local search analytics plugin to help track the offline conversion. Please visit <a href="http://bizible.com">Bizible</a> for more information.
-Version: 0.2.1
+Version: 0.2.2
 Author: Aaron Bird, Peter Thompson, Jason Li
 Author URI: http://bizible.com
 
